@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		B67F8E3930191CFD00167753 /* AnimeSensei.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimeSensei.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B68EEC5E301A6C5A009271D6 /* AnimeSensei.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimeSensei.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -33,16 +33,8 @@
 			isa = PBXGroup;
 			children = (
 				B67F8E3B30191CFD00167753 /* AnimeSensei */,
-				B67F8E3A30191CFD00167753 /* Products */,
+				B68EEC5E301A6C5A009271D6 /* AnimeSensei.app */,
 			);
-			sourceTree = "<group>";
-		};
-		B67F8E3A30191CFD00167753 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				B67F8E3930191CFD00167753 /* AnimeSensei.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -67,7 +59,7 @@
 			packageProductDependencies = (
 			);
 			productName = AnimeSensei;
-			productReference = B67F8E3930191CFD00167753 /* AnimeSensei.app */;
+			productReference = B68EEC5E301A6C5A009271D6 /* AnimeSensei.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -95,7 +87,7 @@
 			mainGroup = B67F8E3030191CFD00167753;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = B67F8E3A30191CFD00167753 /* Products */;
+			productRefGroup = B67F8E3030191CFD00167753;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
