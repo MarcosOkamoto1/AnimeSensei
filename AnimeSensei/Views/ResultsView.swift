@@ -2,21 +2,17 @@ import SwiftUI
 
 struct ResultsView: View {
     let searchText: String
-
-    @State private var animes: [Anime] = []
-    @State private var isLoading = false
-    @State private var errorMessage: String?
-
-    private let service = AniListService()
-
+    
+    @State private var viewModel = ResultsViewModel()
+    
     var body: some View {
         VStack {
-            if isLoading {
+            if viewModel.isLoading {
                 ProgressView("Loading animes...")
-            } else if let errorMessage {
+            } else if let errorMessage = viewModel.errorMessage {
                 Text(errorMessage)
             } else {
-                List(animes) { anime in
+                List(viewModel.animes) { anime in
                     NavigationLink {
                         AnimeDetailView(anime: anime)
                     } label: {
@@ -27,17 +23,7 @@ struct ResultsView: View {
         }
         .navigationTitle("Resultados")
         .task {
-            isLoading = true
-
-            do {
-                animes = try await service.fetchAnimes(
-                    searchText: searchText
-                )
-            } catch {
-                errorMessage = error.localizedDescription
-            }
-
-            isLoading = false
+           await viewModel.search(searchText: searchText)
         }
     }
 }
