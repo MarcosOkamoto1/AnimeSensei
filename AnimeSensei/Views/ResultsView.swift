@@ -30,7 +30,9 @@ struct ResultsView: View {
             isLoading = true
 
             do {
-                animes = try await service.fetchAnimes()
+                animes = try await service.fetchAnimes(
+                    searchText: searchText
+                )
             } catch {
                 errorMessage = error.localizedDescription
             }

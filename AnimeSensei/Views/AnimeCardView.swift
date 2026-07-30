@@ -47,5 +47,6 @@ struct AnimeCardView: View {
                     .lineLimit(3)
             }
         }
+        .padding()
     }
 }
