@@ -18,3 +18,18 @@ struct RecommendedAnime: Decodable, Identifiable {
     let recommendationScore: Int
     let reason: String
 }
+
+
+extension RecommendedAnime {
+    var anime: Anime {
+        Anime(
+            id: id,
+            title: title,
+            description: description,
+            episodes: episodes,
+            genres: genres,
+            averageScore: averageScore,
+            coverImage: coverImage
+        )
+    }
+}
